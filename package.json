@@ -1,0 +1,40 @@
+{
+  "name": "leadmanag",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-alert": "^5.5.0",
+    "react-alert-template-basic": "^1.0.0",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-transition-group": "^4.2.1",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch  ./lead_manager_react_django/frontend/src/index.js --output ./lead_manager_react_django/frontend/static/frontend/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jitenderShrma/leadmanager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jitenderShrma/leadmanager/issues"
+  },
+  "homepage": "https://github.com/jitenderShrma/leadmanager#readme",
+  "description": ""
+}
