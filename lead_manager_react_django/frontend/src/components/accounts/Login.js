@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
     state = {
-        username: '',
         email: '',
         password: '',
         password2: ''
@@ -13,10 +14,8 @@ class Register extends Component {
     }
     onSubmit = (e) => {
         const newUser = {
-            username: this.state.username,
             email: this.state.email,
-            password: this.state.password,
-            password2: this.state.password2
+            password: this.state.password
         }
         // call action
         //this.props.addLead(newLead);
@@ -24,23 +23,12 @@ class Register extends Component {
         e.preventDefault();
     }
     render() {
-        const {username, email, password } = this.props.errors;
+        const {email, password } = this.props.errors;
         return (
             <div className="col-md-6 m-auto">
                 <div className="card card-body mt-4 mb-4">
                 <h2>Register</h2>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Username</label>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="username"
-                            onChange={this.onChange}
-                            value={this.state.username}
-                        />
-                        <div className="invalid-feedback">{username}</div>
-                    </div>
                     <div className="form-group">
                         <label>Email</label>
                         <input
@@ -65,21 +53,9 @@ class Register extends Component {
 
                     </div>
                     <div className="form-group">
-                        <label>Conform Password</label>
-                        <input
-                            className={classnames('form-control', { 'is-invalid': password2 })}
-                            type="text"
-                            name="message"
-                            onChange={this.onChange}
-                            value={this.state.password2}
-                        />
-                        <div className="invalid-feedback">{password2}</div>
-
+                        <button type="submit" className="btn btn-primary">Login</button>
                     </div>
-                    <div className="form-group">
-                        <button type="submit" className="btn btn-primary">Register</button>
-                    </div>
-                    <p>Already have an account? <Link to="/login">Login</Link></p>
+                    <p>Already have not an account? <Link to="/register">Register</Link></p>
                 </form>
             </div> 
             </div>
